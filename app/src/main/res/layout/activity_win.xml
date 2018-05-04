@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.doublespeak.android.doublespeak.activities.MainActivity">
+
+    <!-- background placeholder -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_victory" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/win_screen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_content_divider"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/typography_title"
+            tools:text="Level completed!" />
+
+        <TextView
+            android:id="@+id/time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/win_screen_title"
+            android:padding="@dimen/layout_content_divider"
+            android:text="Your Time:"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/typography_body2" />
+
+        <TextView
+            android:id="@+id/time_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/win_screen_title"
+            android:layout_toEndOf="@+id/time_title"
+            android:padding="@dimen/layout_content_divider"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/typography_body2"
+            tools:text="32 sec" />
+
+        <TextView
+            android:id="@+id/word_number_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time_title"
+            android:padding="@dimen/layout_content_divider"
+            android:text="Points:"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/typography_body2" />
+
+        <TextView
+            android:id="@+id/word_number_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time_title"
+            android:layout_toEndOf="@+id/word_number_title"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/typography_body2"
+            tools:text="8" />
+
+        <TextView
+            android:id="@+id/tries_number_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/word_number_title"
+            android:padding="@dimen/layout_content_divider"
+            android:text="Number of tries:"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/typography_body2" />
+
+        <TextView
+            android:id="@+id/tries_number_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/word_number_title"
+            android:layout_toEndOf="@+id/tries_number_title"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/typography_body2"
+            tools:text="17" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="@dimen/horizontal_margin">
+        <Button
+            android:id="@+id/btTryAgain"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="tryAgain"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:text="Restart"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="@dimen/typography_body2"/>
+    </RelativeLayout>
+
+</FrameLayout>

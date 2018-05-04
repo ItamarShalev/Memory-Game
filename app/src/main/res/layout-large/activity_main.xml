@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+
+    <!-- background placeholder -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/bg_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/material_mountain" />
+
+    <!-- appbar -->
+    <include layout="@layout/layout_game_bar" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/game_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_game_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:paddingRight="-10dp"
+        android:paddingTop="@dimen/horizontal_screen_edge_content_margin"
+        android:paddingLeft="@dimen/horizontal_screen_edge_content_margin"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/app_bar_height"
+        android:text="@string/positive"
+        android:textColor="@color/colorCaption"
+        android:textSize="@dimen/typography_display3"
+        android:visibility="gone" />
+
+
+    <!-- background snow animation -->
+    <com.jetradarmobile.snowfall.SnowfallView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_game_bar" />
+
+</RelativeLayout>
